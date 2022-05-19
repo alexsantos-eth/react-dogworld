@@ -1,14 +1,15 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
+// REACT
+import React from 'react'
+import ReactDOM from 'react-dom/client'
 
-// COMPONENTES
-import App from "components/app";
+// COMPONENTS
+import App from 'components/app'
 
-// ESTILOS GLOBALES
-import "./index.css";
+// GLOBAL STYLES
+import './index.css'
 
-ReactDOM.createRoot(document.getElementById("root")!).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+ReactDOM.createRoot(document.getElementById('root')!).render(
+	<React.StrictMode>
+		<App />
+	</React.StrictMode>,
+)

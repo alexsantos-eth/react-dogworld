@@ -1,7 +1,24 @@
-import React from "react";
+// REACT
+import React from 'react'
+
+// PROVIDERS
+import RouterProvider from 'providers/router'
+
+// COMPONENTS
+import Layout from 'components/layout'
+
+// HOOKS
+import useIcons from './hooks'
 
 const App: React.FC = () => {
-  return <div>App</div>;
-};
+	// HOOKS
+	useIcons()
 
-export default App;
+	return (
+		<Layout>
+			<RouterProvider />
+		</Layout>
+	)
+}
+
+export default App
