@@ -1,0 +1,49 @@
+.container {
+	display: grid;
+	grid-template-columns: 1fr auto;
+	column-gap: calc(var(--margin) * 2);
+
+	& > div {
+		align-items: center;
+		position: relative;
+		display: flex;
+		width: 100%;
+
+		& > svg {
+			position: absolute;
+			stroke: #555;
+			left: 20px;
+			fill: #eee;
+			z-index: 2;
+		}
+
+		.search {
+			border-radius: 100px;
+			padding-left: 55px;
+			font-weight: 400;
+			font-size: 1.2em;
+			outline: none;
+			color: #555;
+			border: none;
+			height: 50px;
+			width: 100%;
+		}
+	}
+
+	button {
+		background: var(--orange);
+		justify-content: center;
+		border-radius: 20px;
+		align-items: center;
+		appearance: none;
+		display: flex;
+		outline: none;
+		height: 50px;
+		border: none;
+		width: 50px;
+
+		svg {
+			stroke: #fff;
+		}
+	}
+}

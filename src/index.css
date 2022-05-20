@@ -1,4 +1,73 @@
+@font-face {
+	font-family: 'Mont';
+	src: url('/fonts/Mont-Bold.otf');
+	font-weight: 500;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Mont';
+	src: url('/fonts/Mont-Regular.otf');
+	font-weight: 400;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Mont';
+	src: url('/fonts/Mont-Light.otf');
+	font-weight: 300;
+	font-display: swap;
+}
+
 * {
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
+	font-family: 'Mont';
+}
+
+body {
+	--margin: 8px;
+	--orange: #fed4a4;
+	--pink: #fceeec;
+	background: var(--pink);
+}
+
+input[type='search']::-webkit-search-decoration,
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-results-button,
+input[type='search']::-webkit-search-results-decoration {
+	-webkit-appearance: none;
+}
+
+button {
+	position: relative;
+	overflow: hidden;
+	cursor: pointer;
+	transition: transform 0.2s ease-in;
+}
+
+button::before {
+	background: rgba(0, 0, 0, 0.05);
+	transition: opacity 0.2s ease-in;
+	position: absolute;
+	height: 100%;
+	content: '';
+	width: 100%;
+	opacity: 0;
+	z-index: 0;
+	top: 0;
+	left: 0;
+}
+
+button > * {
+	position: relative;
+	z-index: 1;
+}
+
+button:hover::before {
+	opacity: 1;
+}
+
+button:hover {
+	transform: scale(1.05);
 }
