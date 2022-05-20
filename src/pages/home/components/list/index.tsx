@@ -10,6 +10,10 @@ import useDogsList from './hooks'
 // ESTILOS
 import Styles from './style.module.scss'
 
+// LOCAL COMPONENTS
+import DogListSkeleton from './components/skeleton'
+import DogListItem from './components/item'
+
 const DogList: React.FC = () => {
 	// MORE
 	const [showMore, setShowMore] = useState<boolean>(false)
@@ -27,22 +31,27 @@ const DogList: React.FC = () => {
 				<p>Click para ver</p>
 			</div>
 			<ul>
-				{dogList?.map((dogName, index) =>
-					(!showMore && index < 3) || showMore ? (
-						<li key={dogName}>
-							<Link to={`/family/${dogName}`}>
-								<span>
-									<b>{index + 1}</b> {dogName.charAt(0).toUpperCase()}
-									{dogName.substring(1)}
-								</span>
-								<Icon name="arrow" height={20} width={20} />
-							</Link>
-						</li>
-					) : null,
-				)}
+				{dogList
+					? dogList.map((dogName, index) =>
+							(!showMore && index < 3) || showMore ? (
+								<DogListItem key={dogName} dogName={dogName} index={index} />
+							) : null,
+					  )
+					: Array(3)
+							.fill(3)
+							.map((_, i) => <DogListSkeleton key={`dog_item_skeleton_${i}`} />)}
 			</ul>
 			<button onClick={toggleShowMore}>
-				<Icon name="down" height={20} width={20} />
+				<div
+					style={{
+						transition: 'transform 0.2s ease',
+						transform: `rotate(${!showMore ? 0 : 180}deg) translate(${
+							!showMore ? 0 : '10px'
+						}, 3px)`,
+					}}
+				>
+					<Icon name="down" height={20} width={20} />
+				</div>
 				{showMore ? 'Ver menos' : 'Ver más'}
 			</button>
 		</div>

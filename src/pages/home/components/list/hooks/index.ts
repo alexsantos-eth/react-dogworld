@@ -15,7 +15,9 @@ const useDogsList = () => {
 		})
 			.then((req) => req.json())
 			.then((data) => {
-				setDogList(data?.message ? Object.keys(data.message) : undefined)
+				setTimeout(() => {
+					setDogList(data?.message ? Object.keys(data.message) : undefined)
+				}, 1000)
 			})
 	}, [])
 
