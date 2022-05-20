@@ -28,6 +28,7 @@
 
 body {
 	background: var(--paper);
+	--lightBlue: #76ace2;
 	--green: #51b78e;
 	--paper: #f5f6f6;
 	--blue: #25294d;

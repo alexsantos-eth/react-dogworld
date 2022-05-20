@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48 48" width="48px" height="48px">
+<defs>
+<filter id="alpha" filterUnits="objectBoundingBox" x="0%" y="0%" width="100%" height="100%">
+  <feColorMatrix type="matrix" in="SourceGraphic" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"/>
+</filter>
+<mask id="mask0">
+  <g filter="url(#alpha)">
+<rect x="0" y="0" width="48" height="48" style="fill:rgb(0%,0%,0%);fill-opacity:0.35;stroke:none;"/>
+  </g>
+</mask>
+<image id="image507466" width="48" height="48" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAABUUlEQVRoge3YsUrDUBTG8e8c4Yaig7i6ZZSCjj5EnkBnMQ55EdcsIYsQ7NTZhxAqZBDfwMUlonW4DrkudRFOSmyvB+H81ntDv3/aqYAxxmiidReKoki895cAzgBMAexG3vQB4JGIZs65uixLP3R5MCDP88O+7+8AHG9z4QgtM2dVVT1LF8SA1Zu/h974b22SJKfSN8HSU6ufjfZ4ADjx3l9Ih2JACOE8zp7xiEjcIgYQ0VGcOeOFEKbSmRgAYC/Clt8StwwF/AsWoM0CtFmANgvQZgHaLECbBWizAG0WoM0CtFmAtqGA5Z+tWO9NOhj6a/EpzpbxiEjcIgYw822cOeOFEGbSmRjgnKsBtFEWjdN2XVdLh2JAWZaemTPoRrTMnM3n80/pws7Q04vF4j1N05vJZPJCRAcA9gG4ba/8YQngAcB113VXTdO8Rv48Y4zZwBdciFHRCRSXogAAAABJRU5ErkJggg=="/>
+</defs>
+<g id="surface507462">
+<use xlink:href="#image507466" mask="url(#mask0)"/>
+<path style=" stroke:none;fill-rule:evenodd;fill:rgb(40.000001%,40.000001%,40.000001%);fill-opacity:1;" d="M 35 22.601562 C 35 18.953125 32.046875 16 28.398438 16 C 26.703125 16 25.171875 16.660156 24 17.710938 C 22.828125 16.660156 21.296875 16 19.601562 16 C 15.953125 16 13 18.953125 13 22.601562 C 13 24.464844 13.777344 26.140625 15.019531 27.339844 C 15.03125 27.351562 21.617188 33.953125 21.617188 33.953125 C 22.933594 35.265625 25.066406 35.265625 26.378906 33.953125 C 26.378906 33.953125 32.96875 27.351562 32.976562 27.339844 C 34.222656 26.140625 35 24.464844 35 22.601562 Z M 35 22.601562 "/>
+</g>
+</svg>
