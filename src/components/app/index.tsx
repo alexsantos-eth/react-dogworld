@@ -1,5 +1,6 @@
 // REACT
 import React from 'react'
+import { BrowserRouter } from 'react-router-dom'
 
 // PROVIDERS
 import RouterProvider from 'providers/router'
@@ -15,9 +16,11 @@ const App: React.FC = () => {
 	useIcons()
 
 	return (
-		<Layout>
-			<RouterProvider />
-		</Layout>
+		<BrowserRouter>
+			<Layout>
+				<RouterProvider />
+			</Layout>
+		</BrowserRouter>
 	)
 }
 

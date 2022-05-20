@@ -1,0 +1,58 @@
+.container {
+	border-radius: 20px 20px 0 0;
+	position: relative;
+	height: 50px;
+	width: 100%;
+
+	&::before,
+	&::after {
+		background-color: var(--blue);
+		border-radius: 20px 20px 0 0;
+		width: calc(50vw - 31px);
+		position: absolute;
+		height: 50px;
+		content: '';
+		right: 0;
+		top: 0;
+	}
+
+	&::after {
+		right: unset;
+		left: 0;
+	}
+
+	.homeButton {
+		div {
+			transition: transform 0.2s ease-in-out;
+			border: 5px solid var(--lightPink);
+			transform: translateX(-50%);
+			background: var(--pink);
+			justify-content: center;
+			align-items: center;
+			border-radius: 100%;
+			position: absolute;
+			display: flex;
+			height: 70px;
+			width: 70px;
+			left: 50%;
+			top: -35px;
+			z-index: 2;
+
+			svg {
+				stroke: #fff;
+			}
+		}
+
+		&::before {
+			background-color: var(--blue);
+			transform: translateX(-50%);
+			position: absolute;
+			bottom: 0px;
+			width: 100px;
+			height: 35px;
+			content: '';
+			z-index: -1;
+			left: 50%;
+		}
+	}
+}

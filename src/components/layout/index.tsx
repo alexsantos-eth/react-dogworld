@@ -2,6 +2,7 @@
 import React from 'react'
 
 // COMPONENTES
+import BottomBar from './components/bottomBar'
 import Topbar from './components/topbar'
 
 // STYLES
@@ -11,7 +12,8 @@ const Layout: React.FC<FCProps> = ({ children }) => {
 	return (
 		<div className={Styles.container}>
 			<Topbar />
-			{children}
+			<main>{children}</main>
+			<BottomBar />
 		</div>
 	)
 }

@@ -1,16 +1,14 @@
 // REACT
 import React from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 
 // PAGES
 import HomePage from 'pages/home'
 
 const RouterProvider: React.FC = () => (
-	<BrowserRouter>
-		<Routes>
-			<Route path="/" element={<HomePage />} />
-		</Routes>
-	</BrowserRouter>
+	<Routes>
+		<Route path="/" element={<HomePage />} />
+	</Routes>
 )
 
 export default RouterProvider

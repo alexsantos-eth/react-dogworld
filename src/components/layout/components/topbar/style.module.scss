@@ -1,7 +1,8 @@
 .container {
-	display: grid;
-	grid-template-columns: 1fr auto;
 	column-gap: calc(var(--margin) * 2);
+	padding: calc(var(--margin) * 3);
+	grid-template-columns: 1fr auto;
+	display: grid;
 
 	& > div {
 		align-items: center;
