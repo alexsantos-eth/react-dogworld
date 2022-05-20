@@ -1,7 +1,7 @@
 // REACT
 import React from 'react'
 
-// COMPONENTES
+// COMPONENTS
 import BottomBar from './components/bottomBar'
 import Topbar from './components/topbar'
 

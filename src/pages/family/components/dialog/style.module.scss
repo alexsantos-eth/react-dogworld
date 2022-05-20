@@ -1,0 +1,19 @@
+.container {
+	transition: opacity 0.2s ease-in;
+	position: fixed;
+	height: 100vh;
+	width: 100%;
+	z-index: 3;
+	left: 0;
+	top: 0;
+
+	.backdrop {
+		background: rgba(0, 0, 0, 0.4);
+		backdrop-filter: blur(5px);
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		left: 0;
+		top: 0;
+	}
+}

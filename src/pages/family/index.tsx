@@ -1,17 +1,36 @@
 import React from 'react'
+import { useNavigate, useParams } from 'react-router-dom'
 
-// HOOKS
-import { useParams } from 'react-router-dom'
-import useDogFamily from './hooks'
+// COMPONENTS
+import DogFamilyList from './components/list'
+import DogDialog from './components/dialog'
+
+// STYLES
+import Styles from './style.module.scss'
+import handleDogBread from './events'
+
+// CONTEXT
+import DogFamilyContext from './context'
 
 const DogFamilyPage: React.FC = () => {
 	// PARAMS
 	const { dogFamily } = useParams()
 
-	// LIST
-	const dogList = useDogFamily(dogFamily ?? '')
+	// ROUTER
+	const navigate = useNavigate()
 
-	return <div>DogFamily</div>
+	// DIALOGO
+	const handleDialog = (dogName: string, open: boolean) => () =>
+		handleDogBread(navigate, dogName, open, dogFamily)
+
+	return (
+		<div className={Styles.container}>
+			<DogFamilyContext.Provider value={{ handleDialog }}>
+				<DogFamilyList />
+				<DogDialog />
+			</DogFamilyContext.Provider>
+		</div>
+	)
 }
 
 export default DogFamilyPage
