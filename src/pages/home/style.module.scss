@@ -1,36 +1,10 @@
 .container {
 	padding: 0 calc(var(--margin) * 3);
 
-	.titleContainer {
-		position: relative;
-
-		img {
-			position: absolute;
-			height: 180px;
-			left: 10px;
-			top: 20px;
-		}
-
-		.title {
-			background: #fff;
-			padding: calc(var(--margin) * 3);
-			padding-left: 130px;
-			border-radius: 20px;
-
-			h1,
-			p {
-				color: #333;
-			}
-
-			p {
-				margin-top: var(--margin);
-				line-height: 1.4;
-				max-width: 200px;
-
-				span {
-					color: var(--lightBlue);
-				}
-			}
+	.sections {
+		& > div:first-child {
+			margin-bottom: 35px;
+			z-index: 2;
 		}
 	}
 }
