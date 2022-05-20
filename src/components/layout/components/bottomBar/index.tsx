@@ -2,6 +2,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+// COMPONENTS
+import Icon from 'components/icon'
+
 // STYLE
 import Styles from './style.module.scss'
 
@@ -10,7 +13,7 @@ const BottomBar = () => {
 		<div className={Styles.container}>
 			<Link to="/" className={`${Styles.homeButton}`}>
 				<div>
-					<span data-feather="home" />
+					<Icon name="home" height={30} width={30} />
 				</div>
 			</Link>
 		</div>

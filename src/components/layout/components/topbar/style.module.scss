@@ -10,11 +10,9 @@
 		display: flex;
 		width: 100%;
 
-		& > svg {
+		& > img {
 			position: absolute;
-			stroke: #555;
 			left: 20px;
-			fill: #eee;
 			z-index: 2;
 		}
 
@@ -32,7 +30,7 @@
 	}
 
 	button {
-		background: var(--orange);
+		background: var(--green);
 		justify-content: center;
 		border-radius: 20px;
 		align-items: center;
@@ -42,9 +40,5 @@
 		height: 50px;
 		border: none;
 		width: 50px;
-
-		svg {
-			stroke: #fff;
-		}
 	}
 }

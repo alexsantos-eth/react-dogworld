@@ -27,11 +27,10 @@
 }
 
 body {
-	background: var(--lightPink);
-	--lightPink: #fceeec;
-	--orange: #fed4a4;
-	--pink: #fda9aa;
-	--blue: #48456d;
+	background: var(--paper);
+	--green: #51b78e;
+	--paper: #f5f6f6;
+	--blue: #25294d;
 	--margin: 8px;
 }
 

@@ -24,9 +24,9 @@
 	.homeButton {
 		div {
 			transition: transform 0.2s ease-in-out;
-			border: 5px solid var(--lightPink);
+			border: 5px solid var(--paper);
 			transform: translateX(-50%);
-			background: var(--pink);
+			background: var(--green);
 			justify-content: center;
 			align-items: center;
 			border-radius: 100%;
@@ -37,10 +37,6 @@
 			left: 50%;
 			top: -35px;
 			z-index: 2;
-
-			svg {
-				stroke: #fff;
-			}
 		}
 
 		&::before {
