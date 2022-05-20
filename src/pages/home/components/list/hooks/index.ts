@@ -15,9 +15,24 @@ const useDogsList = () => {
 		})
 			.then((req) => req.json())
 			.then((data) => {
-				setTimeout(() => {
-					setDogList(data?.message ? Object.keys(data.message) : undefined)
-				}, 1000)
+				// UNDEFINED DATA
+				if (!data) {
+					console.warn('[Error] empty data getting list')
+					return
+				}
+
+				// ERROR AT SERVER
+				if (data?.status !== 'success') {
+					console.warn('[Error] getting list')
+					return
+				}
+
+				// GET AT TIME
+				setTimeout(() => setDogList(Object.keys(data.message)), 1000)
+			})
+			.catch((err) => {
+				if (err) console.warn('[Error] getting list', err)
+				return
 			})
 	}, [])
 
