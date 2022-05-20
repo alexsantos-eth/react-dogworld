@@ -2,6 +2,8 @@
 	margin-bottom: calc(var(--margin) * 3);
 	border-radius: var(--radius);
 	background: var(--white);
+	flex-direction: column;
+	display: flex;
 
 	h2,
 	p,
@@ -62,6 +64,27 @@
 					}
 				}
 			}
+		}
+	}
+
+	button {
+		padding: calc(var(--margin) * 1.5) calc(var(--margin) * 3);
+		background-color: var(--lightBlue2);
+		margin: calc(var(--margin) * 2);
+		border-radius: 100px;
+		align-self: flex-end;
+		color: var(--white);
+		align-items: center;
+		width: max-content;
+		font-weight: 500;
+		appearance: none;
+		font-size: 1em;
+		display: flex;
+		outline: none;
+		border: none;
+
+		img {
+			margin-right: calc(var(--margin) * 1);
 		}
 	}
 }
