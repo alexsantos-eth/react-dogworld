@@ -28,11 +28,15 @@
 
 body {
 	background: var(--paper);
+	--lightBlue2: #648bcc;
 	--lightBlue: #76ace2;
 	--green: #51b78e;
 	--paper: #f5f6f6;
 	--blue: #25294d;
+	--white: #fff;
+	--text: #444;
 	--margin: 8px;
+	--radius: 20px;
 }
 
 input[type='search']::-webkit-search-decoration,
@@ -78,4 +82,8 @@ button:hover::before,
 button:hover,
 .button:hover {
 	transform: scale(1.05);
+}
+
+ul {
+	list-style: none;
 }

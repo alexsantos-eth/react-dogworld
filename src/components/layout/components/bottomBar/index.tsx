@@ -8,7 +8,7 @@ import Icon from 'components/icon'
 // STYLE
 import Styles from './style.module.scss'
 
-const BottomBar = () => {
+const BottomBar: React.FC = () => {
 	return (
 		<div className={Styles.container}>
 			<Link to="/" className={`${Styles.homeButton}`}>

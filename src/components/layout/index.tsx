@@ -11,8 +11,10 @@ import Styles from './style.module.scss'
 const Layout: React.FC<FCProps> = ({ children }) => {
 	return (
 		<div className={Styles.container}>
-			<Topbar />
-			<main>{children}</main>
+			<main>
+				<Topbar />
+				{children}
+			</main>
 			<BottomBar />
 		</div>
 	)

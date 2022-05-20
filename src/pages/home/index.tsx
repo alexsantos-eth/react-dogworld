@@ -3,6 +3,7 @@ import React from 'react'
 
 // COMPONENTS
 import NotFound from './components/notFound'
+import DogList from './components/list'
 import Title from './components/title'
 
 // STYLES
@@ -15,6 +16,7 @@ const HomePage: React.FC = () => {
 				<Title />
 				<NotFound />
 			</div>
+			<DogList />
 		</div>
 	)
 }

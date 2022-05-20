@@ -14,7 +14,7 @@ const Title: React.FC = () => {
 			<div className={Styles.title}>
 				<h1>DogWorld</h1>
 				<p>
-					Si eres un <span>#DogLover</span> te encantara esta app.
+					Si eres un <span>#DogLover</span> te encantara esto.
 				</p>
 			</div>
 		</div>

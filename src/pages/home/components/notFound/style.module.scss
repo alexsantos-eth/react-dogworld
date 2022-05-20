@@ -9,13 +9,13 @@
 	}
 
 	.title {
-		background: #fff;
 		padding: calc(var(--margin) * 3);
-		border-radius: 20px;
+		border-radius: var(--radius);
+		background: var(--white);
 
 		h1,
 		p {
-			color: #333;
+			color: var(--text);
 		}
 
 		p {

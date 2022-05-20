@@ -12,10 +12,10 @@ const Topbar: React.FC = () => {
 		<div className={Styles.container}>
 			<div>
 				<Icon name="search" height={25} width={25} />
-				<input className={Styles.search} type="search" placeholder="Buscar familia" />
+				<input className={Styles.search} type="search" placeholder="Buscar raza" />
 			</div>
 			<button>
-				<Icon name="account" height={30} width={30} />
+				<Icon name="moon" height={20} width={20} />
 			</button>
 		</div>
 	)
