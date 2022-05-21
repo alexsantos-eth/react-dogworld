@@ -41,10 +41,10 @@ const DogList: React.FC = () => {
 							.fill(3)
 							.map((_, i) => <DogListSkeleton key={`dog_item_skeleton_${i}`} />)}
 			</ul>
-			<button onClick={toggleShowMore}>
+			<button className="btn" onClick={toggleShowMore}>
 				<div
 					style={{
-						transition: 'transform 0.2s ease',
+						transition: 'transform 0.2s cubic-bezier(.47,1.64,.41,.8)',
 						transform: `rotate(${!showMore ? 0 : 180}deg) translate(${
 							!showMore ? 0 : '10px'
 						}, 3px)`,

@@ -18,23 +18,7 @@
 	}
 
 	button {
-		padding: calc(var(--margin) * 1.5) calc(var(--margin) * 3);
-		background-color: var(--lightBlue);
 		margin: calc(var(--margin) * 2);
-		border-radius: 100px;
 		align-self: flex-end;
-		color: var(--white);
-		align-items: center;
-		width: max-content;
-		font-weight: 500;
-		appearance: none;
-		font-size: 1em;
-		display: flex;
-		outline: none;
-		border: none;
-
-		img {
-			margin-right: calc(var(--margin) * 1);
-		}
 	}
 }

@@ -1,0 +1,22 @@
+.content {
+	padding: calc(var(--margin) * 3);
+
+	.info {
+		flex-direction: column;
+		display: flex;
+
+		h2,
+		p {
+			color: var(--text);
+		}
+
+		p {
+			margin-top: var(--margin);
+		}
+
+		button {
+			margin-top: calc(var(--margin) * 2);
+			align-self: flex-end;
+		}
+	}
+}

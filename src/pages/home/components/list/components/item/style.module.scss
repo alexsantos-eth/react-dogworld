@@ -2,7 +2,8 @@
 	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 
 	a {
-		transition: background-color 0.2s ease-in, transform 0.2s ease-in;
+		transition: background-color 0.2s cubic-bezier(0.47, 1.64, 0.41, 0.8),
+			transform 0.2s cubic-bezier(0.47, 1.64, 0.41, 0.8);
 		padding: calc(var(--margin) * 2) calc(var(--margin) * 3);
 		border-radius: 0 var(--radius) var(--radius) 0;
 		justify-content: space-between;
@@ -22,7 +23,7 @@
 
 		img {
 			animation: arrow 1s ease-in infinite;
-			transition: opacity 0.2s ease-in;
+			transition: opacity 0.2s cubic-bezier(0.47, 1.64, 0.41, 0.8);
 			opacity: 0;
 		}
 
@@ -45,6 +46,7 @@
 		}
 	}
 }
+
 @keyframes arrow {
 	from {
 		transform: translateX(0);

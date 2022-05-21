@@ -1,7 +1,7 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
 
 // HOOKS
+import { useParams } from 'react-router-dom'
 import useDogCtx from 'pages/family/hooks'
 
 // STYLES
@@ -16,9 +16,12 @@ const DogCard: React.FC<DogCardProps> = ({ dog }) => {
 
 	return (
 		<div className={Styles.container} onClick={handleDialog(dog.name, true)}>
+			{/* MEDIA */}
 			<div className={Styles.image}>
 				<img src={dog.url} alt={dog.name} />
 			</div>
+
+			{/* CONTENT */}
 			<div className={Styles.content}>
 				<div className={Styles.info}>
 					<h2>

@@ -1,16 +1,17 @@
 import React from 'react'
 
 // HOOKS
-import { useParams, useSearchParams } from 'react-router-dom'
+import { useSearchParams } from 'react-router-dom'
 import useDogCtx from 'pages/family/hooks'
 
 // STYLES
 import Styles from './style.module.scss'
 
-const DogDialog: React.FC = () => {
-	// PARAMS
-	const { dogFamily } = useParams()
+// COMPONENTS
+import DogCardContent from './components/cardContent'
+import DogCardMedia from './components/cardMedia'
 
+const DogDialog: React.FC = () => {
 	// SEARCH
 	const [search] = useSearchParams()
 
@@ -30,7 +31,13 @@ const DogDialog: React.FC = () => {
 			}}
 		>
 			<div onClick={handleDialog(dogName ?? '', false)} className={Styles.backdrop} />
-			<p>Click para ver más</p>
+			<div
+				className={Styles.item}
+				style={{ opacity: openDialog ? 1 : 0, transform: `scale(${openDialog ? 1 : 0.9})` }}
+			>
+				<DogCardMedia />
+				<DogCardContent />
+			</div>
 		</div>
 	)
 }

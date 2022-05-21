@@ -1,5 +1,6 @@
 .container {
-	transition: transform 0.2s ease-in, box-shadow 0.2s ease-in;
+	transition: transform 0.2s cubic-bezier(0.47, 1.64, 0.41, 0.8),
+		box-shadow 0.2s cubic-bezier(0.47, 1.64, 0.41, 0.8);
 	border-radius: var(--radius);
 	background: var(--white);
 	overflow: hidden;
@@ -29,6 +30,10 @@
 			h2,
 			p {
 				color: var(--text);
+			}
+
+			p {
+				margin-top: var(--margin);
 			}
 		}
 	}

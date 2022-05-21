@@ -84,6 +84,25 @@ button:hover,
 	transform: scale(1.05);
 }
 
+.btn {
+	padding: calc(var(--margin) * 1.5) calc(var(--margin) * 3);
+	background-color: var(--lightBlue);
+	border-radius: 100px;
+	color: var(--white);
+	align-items: center;
+	width: max-content;
+	font-weight: 500;
+	appearance: none;
+	font-size: 1em;
+	display: flex;
+	outline: none;
+	border: none;
+}
+
+.btn img {
+	margin-right: calc(var(--margin) * 1);
+}
+
 ul {
 	list-style: none;
 }
