@@ -1,0 +1,40 @@
+.container {
+	border-radius: var(--radius);
+	background: var(--white);
+	height: 307px;
+	width: 100%;
+
+	span {
+		background-color: var(--text);
+		display: block;
+		opacity: 0.15;
+	}
+
+	.image {
+		padding: calc(var(--margin) * 2);
+		height: 200px;
+		width: 100%;
+
+		span {
+			border-radius: calc(var(--radius) / 2);
+			height: 100%;
+			width: 100%;
+		}
+	}
+
+	.content {
+		padding: calc(var(--margin) * 2);
+
+		span:first-child {
+			border-radius: calc(var(--radius) / 2);
+			height: 30px;
+		}
+
+		span:nth-child(2) {
+			border-radius: calc(var(--radius) / 2);
+			margin-top: calc(var(--margin) * 2);
+			height: 20px;
+			width: 40%;
+		}
+	}
+}
