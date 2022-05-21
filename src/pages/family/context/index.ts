@@ -1,6 +1,6 @@
 import { createContext } from 'react'
 
-interface DogFamilyContext {
+export interface DogFamilyContext {
 	handleDialog: (dogName: string, open: boolean) => () => void
 }
 
@@ -8,5 +8,5 @@ const defDogFamilyContext: DogFamilyContext = {
 	handleDialog: () => () => {},
 }
 
-const DogFamilyContext: React.Context<DogFamilyContext> = createContext(defDogFamilyContext)
-export default DogFamilyContext
+const DogFamilyCtx: React.Context<DogFamilyContext> = createContext(defDogFamilyContext)
+export default DogFamilyCtx

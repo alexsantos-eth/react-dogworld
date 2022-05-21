@@ -1,3 +1,6 @@
+/**
+ * Icon component props
+ */
 interface IconProps {
-	name: string
+	name: string // Icon keyword
 }

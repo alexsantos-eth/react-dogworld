@@ -35,6 +35,7 @@ const DogCardMedia: React.FC<DogCardMediaProps> = ({ options }) => {
 
 	return (
 		<div className={Styles.image}>
+			{/* SLIDER */}
 			<div className={Styles.slider}>
 				<div
 					className={Styles.images}
@@ -53,6 +54,8 @@ const DogCardMedia: React.FC<DogCardMediaProps> = ({ options }) => {
 					))}
 				</div>
 			</div>
+
+			{/* ACTIONS */}
 			<div className={Styles.actions}>
 				<button onClick={handleSteps(-1)}>
 					<Icon name="down" height={20} width={20} />

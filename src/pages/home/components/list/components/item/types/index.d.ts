@@ -1,4 +1,7 @@
+/**
+ * Home dog list item
+ */
 interface DogListItemProps {
-	dogName: string
-	index: number
+	dogName: string // Sub bread name
+	index: number // Item index
 }

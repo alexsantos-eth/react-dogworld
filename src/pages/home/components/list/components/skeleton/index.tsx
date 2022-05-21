@@ -3,7 +3,7 @@ import React from 'react'
 // STYLES
 import Styles from './style.module.scss'
 
-const DogListSkeleton = () => {
+const DogListSkeleton: React.FC = () => {
 	return (
 		<li className={Styles.container}>
 			<span />

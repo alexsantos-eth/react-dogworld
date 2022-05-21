@@ -2,9 +2,10 @@ import { useEffect, useState } from 'react'
 
 /**
  * Dog family hook
- * @param  {string} name
+ * @param {string} name
+ * @returns {DogBread[] | undefined}
  */
-const useDogFamily = (name: string) => {
+const useDogFamily = (name: string): DogBread[] | undefined => {
 	// LIST
 	const [familyList, setFamilyList] = useState<DogBread[] | undefined>()
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 const Icon: React.FC<IconProps & React.ImgHTMLAttributes<HTMLImageElement>> = ({
 	name,

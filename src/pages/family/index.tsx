@@ -7,10 +7,10 @@ import DogDialog from './components/dialog'
 
 // STYLES
 import Styles from './style.module.scss'
-import handleDogBread from './events'
 
-// CONTEXT
+// TOOLS
 import DogFamilyContext from './context'
+import handleDogBread from './events'
 
 const DogFamilyPage: React.FC = () => {
 	// PARAMS

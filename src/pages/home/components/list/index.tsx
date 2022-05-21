@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
 
 // COMPONENTS
 import Icon from 'components/icon'
@@ -26,10 +25,13 @@ const DogList: React.FC = () => {
 
 	return (
 		<div className={Styles.container}>
+			{/* TITLE */}
 			<div className={Styles.title}>
 				<h2>Más razas:</h2>
 				<p>Click para ver</p>
 			</div>
+
+			{/* LIST */}
 			<ul>
 				{dogList
 					? dogList.map((dogName, index) =>
@@ -41,6 +43,8 @@ const DogList: React.FC = () => {
 							.fill(3)
 							.map((_, i) => <DogListSkeleton key={`dog_item_skeleton_${i}`} />)}
 			</ul>
+
+			{/* SHOW MORE */}
 			<button className="btn" onClick={toggleShowMore}>
 				<div
 					style={{

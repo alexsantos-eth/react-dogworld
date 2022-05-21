@@ -1,10 +1,14 @@
 import { useContext } from 'react'
 
 // CONTEXT
-import DogFamilyContext from '../context'
+import DogContext, { DogFamilyContext } from '../context'
 
-const useDogCtx = () => {
-	const dogFamilyCtx = useContext(DogFamilyContext)
+/**
+ * Load family context
+ * @returns {DogFamilyContext}
+ */
+const useDogCtx = (): DogFamilyContext => {
+	const dogFamilyCtx = useContext(DogContext)
 	return dogFamilyCtx
 }
 

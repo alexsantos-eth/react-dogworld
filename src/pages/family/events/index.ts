@@ -18,6 +18,7 @@ const handleDogBread = (
 	url.append('dogName', encodeURIComponent(dogName))
 	url.append('show', open ? '1' : '0')
 
+	// REDIRECT
 	navigate({
 		pathname: `/family/${family}`,
 		search: url.toString(),

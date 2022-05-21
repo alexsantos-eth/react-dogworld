@@ -2,9 +2,9 @@ import { useEffect, useState } from 'react'
 
 /**
  * Get list hook
- * @returns
+ * @returns {string[] | undefined}
  */
-const useDogsList = () => {
+const useDogsList = (): string[] | undefined => {
 	// LIST
 	const [dogList, setDogList] = useState<string[] | undefined>()
 

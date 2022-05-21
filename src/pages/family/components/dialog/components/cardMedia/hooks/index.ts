@@ -5,8 +5,13 @@ import { useEffect, useState } from 'react'
  * @param  {string} family?
  * @param  {string|null} dogName?
  * @param  {boolean} openDialog
+ * @returns {string[] | undefined}
  */
-const useDogsImages = (family?: string, dogName?: string | null, openDialog?: boolean) => {
+const useDogsImages = (
+	family?: string,
+	dogName?: string | null,
+	openDialog?: boolean,
+): string[] | undefined => {
 	// LIST
 	const [dogList, setDogList] = useState<string[] | undefined>()
 
