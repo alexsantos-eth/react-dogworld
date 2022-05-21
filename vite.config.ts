@@ -2,15 +2,9 @@
 import { defineConfig } from 'vite'
 
 import react from '@vitejs/plugin-react'
-import { VitePWA } from 'vite-plugin-pwa'
 import tsconfigPaths from 'vite-tsconfig-paths'
 
-const configDeps = [
-	tsconfigPaths(),
-	VitePWA({
-		registerType: 'autoUpdate',
-	}),
-]
+const configDeps = [tsconfigPaths()]
 
 export default defineConfig(({ mode }) => ({
 	plugins: mode === 'development' ? [react(), ...configDeps] : configDeps,
