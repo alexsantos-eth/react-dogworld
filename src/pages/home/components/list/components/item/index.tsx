@@ -1,6 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+// TOOLS
+import capitalizeText from 'utils/tools'
+
 // COMPONENTS
 import Icon from 'components/icon'
 
@@ -12,8 +15,7 @@ const DogListItem: React.FC<DogListItemProps> = ({ dogName, index }) => {
 		<li className={Styles.item}>
 			<Link to={`/family/${dogName}`}>
 				<span>
-					<b>{index + 1}</b> {dogName.charAt(0).toUpperCase()}
-					{dogName.substring(1)}
+					<b>{index + 1}</b> {capitalizeText(dogName)}
 				</span>
 				<Icon name="arrow" height={20} width={20} />
 			</Link>

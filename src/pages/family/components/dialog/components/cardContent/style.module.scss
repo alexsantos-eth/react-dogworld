@@ -1,5 +1,33 @@
 .content {
 	padding: calc(var(--margin) * 3);
+	position: relative;
+
+	.like {
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+		transition: background-color 0.2s ease-in;
+		background-color: var(--paper);
+		right: calc(var(--margin) * 2);
+		justify-content: center;
+		align-items: center;
+		border-radius: 100%;
+		position: absolute;
+		display: flex;
+		height: 50px;
+		width: 50px;
+		top: -25px;
+
+		img {
+			margin-right: 0;
+		}
+	}
+
+	.liked {
+		background-color: var(--red);
+
+		img {
+			filter: brightness(0) invert(1);
+		}
+	}
 
 	.info {
 		flex-direction: column;

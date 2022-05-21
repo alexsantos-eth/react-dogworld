@@ -28,7 +28,7 @@ const useDogsList = () => {
 				}
 
 				// GET AT TIME
-				setTimeout(() => setDogList(Object.keys(data.message)), 1000)
+				setDogList(Object.keys(data.message))
 			})
 			.catch((err) => {
 				if (err) console.warn('[Error] getting list', err)

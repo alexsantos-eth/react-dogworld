@@ -22,7 +22,7 @@ const DogFamilyList: React.FC = () => {
 		<div className={Styles.container}>
 			{dogList
 				? dogList.map((dog) => <DogCard key={dog.name} dog={dog} />)
-				: Array(3)
+				: Array(10)
 						.fill({})
 						.map((_, i) => <DogFamilySkeleton key={`dogCard_skeleton_${i}`} />)}
 		</div>

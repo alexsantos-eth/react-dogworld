@@ -10,19 +10,20 @@ import useDogsImages from './hooks'
 // STYLES
 import Styles from './style.module.scss'
 
-const DogCardMedia: React.FC = () => {
+const DogCardMedia: React.FC<DogCardMediaProps> = ({ options }) => {
 	// SLIDER
 	const [step, setStep] = useState<number>(0)
 
 	// PARAMS
-	const { dogFamily } = useParams()
+	const params = useParams()
+	const dogFamily = params.dogFamily ?? options?.family
 
 	// SEARCH
 	const [search] = useSearchParams()
 
 	// SEARCH PARAMS
-	const dogName: string | null = search.get('dogName')
-	const openDialog: boolean = search.get('show') === '1'
+	const dogName: string | undefined = search.get('dogName') ?? options?.dogName
+	const openDialog: boolean = options?.like ? true : search.get('show') === '1'
 
 	// HOOKS
 	const dogImages = useDogsImages(dogFamily, dogName, openDialog)

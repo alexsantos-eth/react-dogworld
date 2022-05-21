@@ -44,7 +44,7 @@ const DogList: React.FC = () => {
 			<button className="btn" onClick={toggleShowMore}>
 				<div
 					style={{
-						transition: 'transform 0.2s cubic-bezier(.47,1.64,.41,.8)',
+						transition: 'transform 0.5s cubic-bezier(.47,1.64,.41,.8)',
 						transform: `rotate(${!showMore ? 0 : 180}deg) translate(${
 							!showMore ? 0 : '10px'
 						}, 3px)`,

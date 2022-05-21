@@ -1,0 +1,15 @@
+.container {
+	padding: calc(var(--margin) * 3);
+	border-radius: var(--radius);
+	background: var(--white);
+
+	h2,
+	p {
+		margin-top: calc(var(--margin) * 2);
+		color: var(--text);
+	}
+
+	p {
+		margin-top: var(--margin);
+	}
+}

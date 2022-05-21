@@ -2,7 +2,7 @@
 import React from 'react'
 
 // COMPONENTS
-import NotFound from './components/notFound'
+import FavoriteDog from './components/favorite'
 import DogList from './components/list'
 import Title from './components/title'
 
@@ -14,7 +14,7 @@ const HomePage: React.FC = () => {
 		<div className={Styles.container}>
 			<div className={Styles.sections}>
 				<Title />
-				<NotFound />
+				<FavoriteDog />
 			</div>
 			<DogList />
 		</div>

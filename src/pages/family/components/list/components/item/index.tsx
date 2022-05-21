@@ -3,6 +3,7 @@ import React from 'react'
 // HOOKS
 import { useParams } from 'react-router-dom'
 import useDogCtx from 'pages/family/hooks'
+import capitalizeText from 'utils/tools'
 
 // STYLES
 import Styles from './style.module.scss'
@@ -25,8 +26,7 @@ const DogCard: React.FC<DogCardProps> = ({ dog }) => {
 			<div className={Styles.content}>
 				<div className={Styles.info}>
 					<h2>
-						{dog.name.charAt(0).toUpperCase()}
-						{dog.name.substring(1)} {dogFamily}
+						{capitalizeText(dog.name)} {dogFamily}
 					</h2>
 					<p>Click para ver más</p>
 				</div>
