@@ -13,10 +13,15 @@ const useDogsImages = (family?: string, dogName?: string | null, openDialog?: bo
 	// GET LIST
 	useEffect(() => {
 		if (family && dogName)
-			if (openDialog)
-				fetch(`https://dog.ceo/api/breed/${family}/${dogName}/images`, {
-					method: 'GET',
-				})
+			if (openDialog) {
+				// WITHOUT SUB BREAD
+				const noBread: boolean = family === dogName
+				fetch(
+					`https://dog.ceo/api/breed/${noBread ? family : `${family}/${dogName}`}/images/random/5`,
+					{
+						method: 'GET',
+					},
+				)
 					.then((req) => req.json())
 					.then((data) => {
 						// UNDEFINED DATA
@@ -40,7 +45,7 @@ const useDogsImages = (family?: string, dogName?: string | null, openDialog?: bo
 						if (err) console.warn('[Error] getting images', err)
 						return
 					})
-			else setDogList(undefined)
+			} else setDogList(undefined)
 	}, [family, dogName, openDialog])
 
 	return dogList

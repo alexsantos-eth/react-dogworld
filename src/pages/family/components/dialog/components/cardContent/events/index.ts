@@ -14,6 +14,7 @@ const toggleLikeDog = (
 		window.localStorage.setItem(
 			'like',
 			JSON.stringify({
+				noBread: family === dogName,
 				like: !prevLike,
 				family,
 				dogName,

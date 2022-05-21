@@ -49,7 +49,7 @@ input[type='search']::-webkit-search-results-decoration {
 
 button,
 .button {
-	transition: transform 0.2s ease-in;
+	transition: transform 0.2s ease;
 	position: relative;
 	overflow: hidden;
 	cursor: pointer;

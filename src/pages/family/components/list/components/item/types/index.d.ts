@@ -3,6 +3,7 @@ interface DogCardProps {
 }
 
 interface DogBread {
+	noBread?: boolean
 	name: string
 	url: string
 }

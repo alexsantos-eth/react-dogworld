@@ -26,7 +26,7 @@ const DogCard: React.FC<DogCardProps> = ({ dog }) => {
 			<div className={Styles.content}>
 				<div className={Styles.info}>
 					<h2>
-						{capitalizeText(dog.name)} {dogFamily}
+						{capitalizeText(dog.name)} {!dog.noBread && dogFamily}
 					</h2>
 					<p>Click para ver más</p>
 				</div>

@@ -42,7 +42,7 @@ const DogCardContent: React.FC = () => {
 			</button>
 			<div className={Styles.info}>
 				<h2>
-					{capitalizeText(dogName ?? '')} {dogFamily}
+					{capitalizeText(dogName ?? '')} {dogName !== dogFamily && dogFamily}
 				</h2>
 				<p>
 					{like

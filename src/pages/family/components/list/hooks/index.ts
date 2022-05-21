@@ -25,6 +25,30 @@ const useDogFamily = (name: string) => {
 					return
 				}
 
+				// EMPTY ARRAY
+				if (data.message.length === 0) {
+					// GET RANDOM IMAGE
+					fetch(`https://dog.ceo/api/breed/${name}/images/random`)
+						.then((req) => req.json())
+						.then((imageData) => {
+							// UNDEFINED DATA
+							if (!imageData) {
+								console.warn('[Error] empty image data getting ', name)
+								return
+							}
+
+							// ERROR AT SERVER
+							if (imageData?.status !== 'success') {
+								console.warn(`[Error] getting ${name} image`, data)
+								return
+							}
+
+							// UPDATE IMAGE
+							setFamilyList([{ name, url: imageData.message, noBread: true }])
+						})
+					return
+				}
+
 				// CREATE A LIST OF IMAGE REQUESTS
 				const reqImages: Promise<DogBread>[] = data.message?.map(
 					async (dog: string): Promise<DogBread> => {
