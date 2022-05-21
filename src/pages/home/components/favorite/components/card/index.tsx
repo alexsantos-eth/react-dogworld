@@ -18,7 +18,7 @@ const DogFavoriteCard = () => {
 		<div className={Styles.container}>
 			<DogCardMedia options={localDog} />
 			<h2>
-				{capitalizeText(localDog.dogName)} {localDog.family}
+				{capitalizeText(localDog.dogName)} {!localDog.noBread && localDog.family}
 			</h2>
 			<p>Esta es tu raza de perro favorita.</p>
 		</div>

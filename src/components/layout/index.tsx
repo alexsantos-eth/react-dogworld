@@ -3,7 +3,6 @@ import React from 'react'
 
 // COMPONENTS
 import BottomBar from './components/bottomBar'
-import Topbar from './components/topbar'
 
 // STYLES
 import Styles from './style.module.scss'
@@ -11,10 +10,7 @@ import Styles from './style.module.scss'
 const Layout: React.FC<FCProps> = ({ children }) => {
 	return (
 		<div className={Styles.container}>
-			<main>
-				<Topbar />
-				{children}
-			</main>
+			<main>{children}</main>
 			<BottomBar />
 		</div>
 	)
