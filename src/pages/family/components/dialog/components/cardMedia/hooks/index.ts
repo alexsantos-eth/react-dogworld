@@ -33,7 +33,7 @@ const useDogsImages = (family?: string, dogName?: string | null, openDialog?: bo
 
 						// LIMIT
 						const images = data.message
-						images.length = 5
+						if (images.length > 5) images.length = 5
 						setDogList(images)
 					})
 					.catch((err) => {
